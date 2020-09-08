@@ -1,0 +1,246 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    
+}
+
+nav{
+    display: flex;
+    justify-content: space-around;
+    align-items:center;
+    min-height: 10vh;
+    background: black;
+    color: white;
+    font-family: sans-serif;
+  
+   
+   
+
+}
+.logo{
+    text-transform: uppercase;
+    letter-spacing:3px;
+    font-size: 22px;
+    text-decoration: none;
+    color:white
+}
+.nav-links{
+    float:right;
+    display:flex;
+    list-style:none;
+    height:100%;
+    justify-content: space-around;
+    width:35%;
+    
+}
+.nav-links a{
+    text-decoration: none;
+    font-family: 'Open Sans', sans-serif;
+    color:white;
+    letter-spacing: 1px;
+    
+}
+.nav-links li ul{
+    list-style:none;
+    }
+
+nav:after{
+    clear:both;
+    display:table;
+}
+nav ul li{
+    background: black;
+    color:white;
+    
+}
+nav ul li a{
+    line-height: 50px;
+    position:relative;
+    padding-bottom:5px;
+    font-size: 18px;
+    color:white;
+    
+}
+nav ul ul {
+    position:absolute;
+    opacity:0;
+    visibility:hidden;
+    
+    
+}
+nav ul  li:hover >ul {
+    opacity:1;
+    visibility:visible;
+    
+    background-color: black;
+    color:white;
+    
+    width:100px;
+}
+
+nav ul ul li{
+    position:relative;
+    display:list-item;
+    width:130px;
+    padding-left: 5px;;
+    left:-5px;
+    
+}
+
+nav ul li a:before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 3px;
+  bottom: 0;
+  left: 0;
+  background-color: tomato;
+  visibility: hidden;
+  transition: all 0.2s ease-in-out;
+}
+
+nav ul li a:hover:before {
+    visibility: visible;
+    width: 100%;
+  }
+.fa-plus{
+    margin-left:40px;
+    font-size:15px;
+}
+
+.show, input{
+    display:none;
+}
+.burger{
+    display:none;
+}
+.burger div{
+    width:25px;
+    height:3px;
+    background-color:white;
+    margin:5px;
+}
+@keyframes navLinkFade{
+    from{
+        opacity:0;
+        transform:translateX(50px);
+    }
+    to{
+        opacity:1;
+        transform:translateX(0px);
+    }
+ }
+ @media all and (max-width:1024px){
+    .nav-links{
+        width: 50%;
+    }
+}
+@media all and (max-width:1000px){
+    html, body{
+        overflow-X: hidden;
+        position: relative
+    }
+    
+    
+
+    .nav-links{
+        position:fixed;
+        right:0px;
+        height:90vh;
+        top:8vh;
+        border-radius: 20px;
+        background-color: black;
+        display:flex;
+        flex-direction: column;
+        padding-left:10px;
+        transform:translateX(100%);
+        transition:transform 0.5s ease-in;
+    }
+    .nav-links li{
+        opacity:0;
+        padding-left:20px;
+    }
+    .burger{
+        display:block;
+        cursor: pointer;
+    }
+    nav ul ul li{
+        font-size:30px;
+        padding-top:15px;
+        padding-left: 30px;
+        padding-right:0px;
+
+    }
+    nav ul ul{
+        position:static;
+    }
+}
+.Blog { 
+    color: whitesmoke;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    align-content: center;
+    font-family: 'Oleo Script', cursive;
+    font-size: xx-large;
+    padding-top: 0.1em;
+    text-decoration-color: whitesmoke;   
+}
+.header {
+    background-color: #F1F1F1;
+    text-align: center;
+    padding: 20px;
+  }
+div {
+    border-style: solid;
+    border-color: whitesmoke;
+    border-width: 10px;
+    text-align: center;
+    padding: auto;
+}
+body{
+    text-align: center;
+    background-color: black ;
+    font-family: 'Frank Ruhl Libre', serif;
+    font-size: 20px;
+    font-family: 'Cormorant Upright', serif;
+    line-height: 1.5;
+    text-align: center;
+    border-style: solid;
+    border-color: whitesmoke;
+    border-width: 5px;
+    padding: auto;
+} 
+#TitleDestinations {
+    color: whitesmoke;
+    align-content: center; 
+    font-family: 'Oleo Script', cursive;
+    font-size: xx-large;
+}
+.Destinations {
+    color: whitesmoke;
+    align-content: center;
+    font-family: 'Oleo Script', cursive;
+    font-size: xx-large;
+    border-color: whitesmoke;
+}
+.text{
+    color: whitesmoke;
+    align-content: center;
+    text-align: center;
+    width: 50%;
+    font-family: 'Oleo Script', cursive;
+    justify-content: center;
+    margin-right: auto;
+    margin-left: auto;
+}
+img{
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.nav-active{
+    transform: translateX(0%);
+}
+.nav-links{
+    z-index: 99999;
+}

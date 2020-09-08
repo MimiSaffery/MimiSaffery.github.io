@@ -1,0 +1,637 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    
+}
+
+nav{
+    display: flex;
+    justify-content: space-around;
+    align-items:center;
+    min-height: 10vh;
+    background: black;
+    color: white;
+    font-family: sans-serif;
+  
+   
+   
+
+}
+.logo{
+    text-transform: uppercase;
+    letter-spacing:3px;
+    font-size: 22px;
+    text-decoration: none;
+    color:white
+}
+.nav-links{
+    float:right;
+    display:flex;
+    list-style:none;
+    height:100%;
+    justify-content: space-around;
+    width:35%;
+    
+}
+.nav-links a{
+    text-decoration: none;
+    font-family: 'Open Sans', sans-serif;
+    color:white;
+    letter-spacing: 1px;
+    
+}
+.nav-links li ul{
+    list-style:none;
+    }
+
+nav:after{
+    clear:both;
+    display:table;
+}
+nav ul li{
+    background: black;
+    color:white;
+    
+}
+nav ul li a{
+    line-height: 50px;
+    position:relative;
+    padding-bottom:5px;
+    font-size: 18px;
+    color:white;
+    
+}
+nav ul ul {
+    position:absolute;
+    opacity:0;
+    visibility:hidden;
+    
+    
+}
+nav ul  li:hover >ul {
+    opacity:1;
+    visibility:visible;
+    
+    background-color: black;
+    color:white;
+    
+    width:100px;
+}
+
+nav ul ul li{
+    position:relative;
+    display:list-item;
+    width:130px;
+    padding-left: 5px;;
+    left:-5px;
+    
+}
+
+nav ul li a:before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 3px;
+  bottom: 0;
+  left: 0;
+  background-color: tomato;
+  visibility: hidden;
+  transition: all 0.2s ease-in-out;
+}
+
+nav ul li a:hover:before {
+    visibility: visible;
+    width: 100%;
+  }
+.fa-plus{
+    margin-left:40px;
+    font-size:15px;
+}
+
+.show, input{
+    display:none;
+}
+.burger{
+    display:none;
+}
+.burger div{
+    width:25px;
+    height:3px;
+    background-color:white;
+    margin:5px;
+}
+
+
+
+
+ @keyframes navLinkFade{
+    from{
+        opacity:0;
+        transform:translateX(50px);
+    }
+    to{
+        opacity:1;
+        transform:translateX(0px);
+    }
+ }
+
+@media all and (max-width:1024px){
+    .nav-links{
+        width: 50%;
+    }
+    .top{
+        height:500px;
+    }
+}
+ @media all and (max-width:1000px){
+    html, body{
+        overflow-X: hidden;
+        position: relative
+    }
+    
+    
+
+    .nav-links{
+        position:fixed;
+        right:0px;
+        height:70vh;
+        top:8vh;
+        border-radius: 20px;
+        background-color: black;
+        display:flex;
+        flex-direction: column;
+        padding-left:10px;
+        transform:translateX(100%);
+        transition:transform 0.5s ease-in;
+    }
+    .nav-links li{
+        opacity:0;
+        padding-left:20px;
+    }
+    .burger{
+        display:block;
+        cursor: pointer;
+    }
+    nav ul ul li{
+        font-size:30px;
+        
+        padding-left: 30px;
+        padding-right:0px;
+
+    }
+    nav ul ul{
+        position:static;
+    }
+     
+    
+     .top{
+        color: white;
+        position:relative;
+        font-family: 'Open Sans', sans-serif;
+        background-image: url('Picture1.jpeg');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        height:350px;
+        display: table;
+        width:100%;
+        
+        }
+        .thumbnail{
+            color: white;
+            position:absolute;
+            transform: translate(-50%, -50%);
+            top:50%;
+            left:20%;
+            font-family: 'Open Sans', sans-serif;
+            font-size:20px ;
+            padding-left:10px;
+            
+            }
+
+     .Title{
+         padding-left:30px;
+         font-size:25px;
+     }
+    
+     
+    
+     .one img{
+        background-attachment: scroll;
+        width:100%;
+        position:relative;
+        padding-top: 30px;
+    }
+    
+
+    .text-1{
+        color: white;
+        padding: 15px;
+        font-size: 12px;
+       
+    }
+    .header-1{
+        top:0px;
+        
+        text-align: center;
+    }
+    #caption-1{
+        top:30px;
+    }
+    .two img{
+        background-attachment: scroll;
+        width:100%;
+        position:relative;
+        
+    }
+    .text-2{
+        padding: 15px;
+        font-size: 12px; 
+       
+    }
+    .header-2{
+        top:0px;
+        font-size: 8px;
+        text-align: center;
+       
+    }
+    #caption-2{
+        top:0px;
+    }
+    .three img{
+        background-attachment: scroll;
+        width:100%;
+        position:relative;
+        
+    }
+    .text-3{
+        padding: 15px;
+        font-size: 12px; 
+       
+    }
+    .header-3{
+        top:0px;
+        font-size: 8px;
+        text-align: center;
+        padding-bottom: 10px;
+       
+    }
+    #caption-3{
+        top:0px;
+        right:0px;
+    }
+    .four img{
+        background-attachment: scroll;
+        width:100%;
+        position:relative;
+        
+    }
+    .text-4{
+        padding: 15px;
+        font-size: 12px; 
+       
+    }
+    .header-4{
+        top:0px;
+        font-size: 8px;
+        text-align: center;
+        padding-bottom: 10px;
+       
+    }
+    #caption-4{
+        top:0px;
+    }
+    .five img{
+        background-attachment: scroll;
+        width:100%;
+        position:relative;
+        
+    }
+    .text-5{
+        padding: 15px;
+        font-size: 12px; 
+       
+    }
+    .header-5{
+        top:0px;
+        font-size: 8px;
+        text-align: center;
+        padding-bottom: 10px;
+       
+    }
+    #caption-5{
+        top:0px;
+    }
+
+    
+    
+ }
+
+ @media (min-width:1000px){
+
+    .thumbnail{
+    color: white;
+    position:absolute;
+    transform: translate(-50%, -50%);
+    top:45%;
+    left:20%;
+    font-family: 'Open Sans', sans-serif;
+    font-size:45px;
+    }
+    
+   
+    .thumbnail span{
+        color:white;
+        font-size: 30px;
+    }
+    .thumb{
+        height:700px;
+        background-position: 10px 35px;
+        display: flex;
+        flex-direction: column;
+        
+    }
+    
+    .one img{
+        float:left;
+        height:650px;
+        background-attachment: scroll;
+        width:50%;
+        position:relative;
+       
+    }
+   
+    .text-1{
+        color: white;
+        text-align: center;
+        padding: 40px;
+        display: flex;
+        flex-direction:column;
+
+        
+    }
+    .two img{
+        float:right;
+        height:600px;
+        background-attachment: scroll;
+        width:50%;
+        position:relative;
+        padding:30px;
+       
+    }
+    #caption-2{
+        top:30px;
+        right:30px;
+    }
+    .text-2{
+        text-align: center;
+        padding: 20px;
+        display: flex;
+        flex-direction:column;
+
+    }
+    
+    .description-1{
+        color:white;
+        font-size: 20px;
+        padding:30px 30px;
+        line-height: 30px;
+        text-align: left;
+
+    }
+    .description-2{
+        font-size: 20px;
+        padding:30px 30px;
+        line-height: 30px;
+        text-align: left;
+
+    }
+    .description-2{
+        font-size: 20px;
+        padding:30px 30px;
+        line-height: 30px;
+        text-align: left;
+
+    }
+    
+    .three img{
+        float:left;
+        height:600px;
+        background-attachment: scroll;
+        width:50%;
+        position:relative;
+        padding:20px;
+       
+    }
+    
+   
+    .four img{
+        float:right;
+        height:600px;
+        background-attachment: scroll;
+        width:50%;
+        position:relative;
+        padding:30px;
+    }
+    .description-4{
+        font-size: 20px;
+        padding:30px 30px;
+        line-height: 30px;
+        text-align: left;
+
+    }
+     #caption-4{
+        right:30px;
+        top:30px;
+    }
+    .five img{
+        float:left;
+        height:550px;
+        background-attachment: scroll;
+        width:50%;
+        position:relative;
+    }
+    .description-5{
+        font-size: 20px;
+        padding:30px 30px;
+        line-height: 30px;
+        text-align: left;
+
+    }
+     #caption-5{
+        position:absolute;
+        background-color: black;
+        color:white;
+        
+    }
+    .top{
+        background-image: url('Picture1.jpeg');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        position: relative;
+        
+    }
+    .one{
+        padding:30px;
+        position:relative;
+    }
+    .text-3{
+    text-align: center;
+    padding: 30px;
+    }
+    .text-4{
+        text-align: center;
+        padding: 30px;
+    
+    }
+    .five{
+        padding:30px;
+    }
+    .text-5{
+        padding: 40px;
+        text-align: center;
+    }
+    #caption-3{
+        top:20px;
+        left:20px;
+    }
+
+ }
+
+ .one{
+     position: relative;
+     background-color:#EAC3B8;
+     overflow: auto;
+     clear: both;
+     font-family: 'Open Sans', sans-serif;
+     
+    
+ }
+ .header-1{
+     font-size: 40px;
+ }
+
+ .header-1 span{
+     color:black;
+     font-size: 40px;
+ }
+ .header-2{
+    font-size: 40px;
+}
+
+.header-2 span{
+    color:#EAC3B8;
+}
+.header-3{
+    font-size: 40px;
+}
+
+.header-3 span{
+    color:black;
+}
+.header-4{
+    font-size: 40px;
+}
+
+.header-4 span{
+    color:#d1b2d1;
+}
+.header-5{
+    font-size: 40px;
+}
+
+.header-5 span{
+    color:black;
+}
+ 
+ .two{
+    position: relative;
+    overflow: auto;
+    clear: both;
+    font-family: 'Open Sans', sans-serif;
+ }
+
+ .three{
+    position: relative;
+    overflow: auto;
+    clear: both;
+    font-family: 'Open Sans', sans-serif;
+    background-color: #d1b2d1;
+ }
+
+ .text-3{
+    color: white;
+    display: flex;
+    flex-direction:column;
+ }
+
+ .four{
+    position: relative;
+    overflow: auto;
+    clear: both;
+    font-family: 'Open Sans', sans-serif; 
+ }
+
+ .text-4{
+    display: flex;
+    flex-direction:column;
+ }
+
+ .five{
+    position: relative;
+    overflow: auto;
+    clear: both;
+    font-family: 'Open Sans', sans-serif;
+    background-color:#a3c1ad;
+    color:white;
+ }
+ .text-5{
+    display: flex;
+    flex-direction:column;
+ }
+ #caption-1{
+    position:absolute;
+    background-color: black;
+    color:white;
+}
+
+
+#caption-2{
+    position:absolute;
+    background-color: black;
+    color:white;
+    
+}
+#caption-3{
+    position:absolute;
+    background-color: black;
+    color:white;
+}
+#caption-4{
+    position:absolute;
+    background-color: black;
+    color:white;
+}
+#caption-5{
+    position:absolute;
+    background-color: black;
+    color:white;
+}
+
+
+#text{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 25px;
+    font-weight:bold;
+}
+.header-container{
+    display: flex;
+}
+.nav-active{
+    transform: translateX(0%);
+}
+.nav-links{
+    z-index: 99999;
+}
